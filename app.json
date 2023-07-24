@@ -1,6 +1,7 @@
 {
   "expo": {
     "name": "todo-calendar",
+    
     "slug": "todo-calendar",
     "version": "1.0.0",
     "orientation": "portrait",
