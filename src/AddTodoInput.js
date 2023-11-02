@@ -1,6 +1,6 @@
 import React from "react"
-import { Text, TextInput, TouchableOpacity, View } from "react-native"
-import { Item_Width } from "./util"
+import {TextInput, TouchableOpacity, View } from "react-native"
+import {Item_Width} from "./util"
 import {AntDesign} from '@expo/vector-icons'
 export default ({value,onchangetext,placeholder,onpressAdd,onSubmitEditing,onFocus})=>{//parameter가 undefined가 되는 이유는 객체만 넘겨서 그럼 객체의 item을 반환해야 한다.
     

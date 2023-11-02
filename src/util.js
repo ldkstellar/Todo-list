@@ -1,8 +1,6 @@
 import dayjs from "dayjs";
-
-
- export const Item_Width = 200;
-export const fillEmptyColumns = (columns, start, end) => {
+  export const Item_Width = 200;
+  export const fillEmptyColumns = (columns, start, end) => {
   const filledColumns = columns.slice(0);
   // 1. 첫날 이전 공백 채우기
   const startDay = dayjs(start).get("day");

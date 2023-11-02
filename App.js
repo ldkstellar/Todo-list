@@ -1,17 +1,15 @@
 
 import dayjs from 'dayjs';
-import { StatusBar } from 'expo-status-bar';
-import { useEffect,useRef } from 'react';
-import { FlatList, SafeAreaView, StyleSheet, Text, TouchableOpacity, View ,Image,TextInput, KeyboardAvoidingView, Platform, Pressable, Keyboard, Alert} from 'react-native';
+import { useRef } from 'react';
+import { FlatList, SafeAreaView, StyleSheet, Text, TouchableOpacity, View , KeyboardAvoidingView, Platform, Pressable, Keyboard, Alert} from 'react-native';
 import Margin from './src/margin';
 import { runPracticeDayjs } from './src/practice-dayjs';
-import { getCalendarColumns, getDaycolor, getDayText, itemSize, Item_Width } from './src/util';
-import { MaterialIcons } from '@expo/vector-icons';
+import { getCalendarColumns, Item_Width } from './src/util';
 import DateTimePickerModal from "react-native-modal-datetime-picker";
 import { useCalendar } from './src/use-calendar';
 import { useTodolist } from './src/use-todolist';
 import Calendar from './src/Calendar';
-import {Ionicons,AntDesign} from '@expo/vector-icons'
+import {Ionicons} from '@expo/vector-icons'
 import AddTodoInput from './src/AddTodoInput';
 import Picture from './src/Picture';
 
@@ -34,7 +32,8 @@ export default function App() {
     removetodo,
     setinput,
     resetInput,
-    input,} =  useTodolist(selectDate);
+    input,
+  } =  useTodolist(selectDate);
 
   const now = dayjs();
   const columns = getCalendarColumns(selectDate);

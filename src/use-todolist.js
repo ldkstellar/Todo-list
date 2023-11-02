@@ -2,8 +2,8 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import dayjs from "dayjs"
 import { useEffect, useState } from "react"
 const todolistkey ="todolistkey";
+
 export const useTodolist = (selectDate)=>{
-  
   const defaultTodolist = [];
   const [todolist , setTodolist] = useState(defaultTodolist);
   const [input , setinput] = useState("");
@@ -53,6 +53,7 @@ export const useTodolist = (selectDate)=>{
   useEffect(()=>{
     init();
   },[]);
+  
   const init = async() =>{
     const result = await AsyncStorage.getItem(todolistkey);
     if(result){
